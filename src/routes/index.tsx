@@ -14,7 +14,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "The complete 2–3 month build plan: dataset, features, stack, pipeline, and interview-grade validation.",
+          "A flagship senior-level data science portfolio project: RFM + K-Means with probabilistic CLV, validated segmentation, and a budget optimizer.",
       },
     ],
   }),

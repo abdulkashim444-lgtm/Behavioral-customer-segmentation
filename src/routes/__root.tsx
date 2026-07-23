@@ -82,10 +82,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "A senior-level data science portfolio build guide: RFM + K-Means segmentation, probabilistic CLV, campaign ROI simulation, and a budget optimizer.",
+          "A flagship senior-level data science portfolio project: RFM + K-Means with probabilistic CLV, validated segmentation, and a budget optimizer.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Behavioral Customer Segmentation — Build Guide" },
+      { name: "twitter:title", content: "Behavioral Customer Segmentation — Build Guide" },
+      { property: "og:description", content: "A flagship senior-level data science portfolio project: RFM + K-Means with probabilistic CLV, validated segmentation, and a budget optimizer." },
+      { name: "twitter:description", content: "A flagship senior-level data science portfolio project: RFM + K-Means with probabilistic CLV, validated segmentation, and a budget optimizer." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3b51622f-abb0-4870-a62c-d875275fadce/id-preview-885680ed--a2976751-e63c-477f-a7ca-6d016f5f5fba.lovable.app-1784824640745.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3b51622f-abb0-4870-a62c-d875275fadce/id-preview-885680ed--a2976751-e63c-477f-a7ca-6d016f5f5fba.lovable.app-1784824640745.png" },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
