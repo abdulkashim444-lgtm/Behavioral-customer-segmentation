@@ -9,8 +9,62 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StackRouteImport } from './routes/stack'
+import { Route as PromptsRouteImport } from './routes/prompts'
+import { Route as PlanRouteImport } from './routes/plan'
+import { Route as PipelineRouteImport } from './routes/pipeline'
+import { Route as InterviewRouteImport } from './routes/interview'
+import { Route as FeaturesRouteImport } from './routes/features'
+import { Route as DecisionRouteImport } from './routes/decision'
+import { Route as DatasetRouteImport } from './routes/dataset'
+import { Route as ChecklistRouteImport } from './routes/checklist'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StackRoute = StackRouteImport.update({
+  id: '/stack',
+  path: '/stack',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PromptsRoute = PromptsRouteImport.update({
+  id: '/prompts',
+  path: '/prompts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PlanRoute = PlanRouteImport.update({
+  id: '/plan',
+  path: '/plan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PipelineRoute = PipelineRouteImport.update({
+  id: '/pipeline',
+  path: '/pipeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InterviewRoute = InterviewRouteImport.update({
+  id: '/interview',
+  path: '/interview',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeaturesRoute = FeaturesRouteImport.update({
+  id: '/features',
+  path: '/features',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DecisionRoute = DecisionRouteImport.update({
+  id: '/decision',
+  path: '/decision',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DatasetRoute = DatasetRouteImport.update({
+  id: '/dataset',
+  path: '/dataset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChecklistRoute = ChecklistRouteImport.update({
+  id: '/checklist',
+  path: '/checklist',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +73,158 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/checklist': typeof ChecklistRoute
+  '/dataset': typeof DatasetRoute
+  '/decision': typeof DecisionRoute
+  '/features': typeof FeaturesRoute
+  '/interview': typeof InterviewRoute
+  '/pipeline': typeof PipelineRoute
+  '/plan': typeof PlanRoute
+  '/prompts': typeof PromptsRoute
+  '/stack': typeof StackRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/checklist': typeof ChecklistRoute
+  '/dataset': typeof DatasetRoute
+  '/decision': typeof DecisionRoute
+  '/features': typeof FeaturesRoute
+  '/interview': typeof InterviewRoute
+  '/pipeline': typeof PipelineRoute
+  '/plan': typeof PlanRoute
+  '/prompts': typeof PromptsRoute
+  '/stack': typeof StackRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/checklist': typeof ChecklistRoute
+  '/dataset': typeof DatasetRoute
+  '/decision': typeof DecisionRoute
+  '/features': typeof FeaturesRoute
+  '/interview': typeof InterviewRoute
+  '/pipeline': typeof PipelineRoute
+  '/plan': typeof PlanRoute
+  '/prompts': typeof PromptsRoute
+  '/stack': typeof StackRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/checklist'
+    | '/dataset'
+    | '/decision'
+    | '/features'
+    | '/interview'
+    | '/pipeline'
+    | '/plan'
+    | '/prompts'
+    | '/stack'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/checklist'
+    | '/dataset'
+    | '/decision'
+    | '/features'
+    | '/interview'
+    | '/pipeline'
+    | '/plan'
+    | '/prompts'
+    | '/stack'
+  id:
+    | '__root__'
+    | '/'
+    | '/checklist'
+    | '/dataset'
+    | '/decision'
+    | '/features'
+    | '/interview'
+    | '/pipeline'
+    | '/plan'
+    | '/prompts'
+    | '/stack'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ChecklistRoute: typeof ChecklistRoute
+  DatasetRoute: typeof DatasetRoute
+  DecisionRoute: typeof DecisionRoute
+  FeaturesRoute: typeof FeaturesRoute
+  InterviewRoute: typeof InterviewRoute
+  PipelineRoute: typeof PipelineRoute
+  PlanRoute: typeof PlanRoute
+  PromptsRoute: typeof PromptsRoute
+  StackRoute: typeof StackRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/stack': {
+      id: '/stack'
+      path: '/stack'
+      fullPath: '/stack'
+      preLoaderRoute: typeof StackRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/prompts': {
+      id: '/prompts'
+      path: '/prompts'
+      fullPath: '/prompts'
+      preLoaderRoute: typeof PromptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/plan': {
+      id: '/plan'
+      path: '/plan'
+      fullPath: '/plan'
+      preLoaderRoute: typeof PlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pipeline': {
+      id: '/pipeline'
+      path: '/pipeline'
+      fullPath: '/pipeline'
+      preLoaderRoute: typeof PipelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/interview': {
+      id: '/interview'
+      path: '/interview'
+      fullPath: '/interview'
+      preLoaderRoute: typeof InterviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/features': {
+      id: '/features'
+      path: '/features'
+      fullPath: '/features'
+      preLoaderRoute: typeof FeaturesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/decision': {
+      id: '/decision'
+      path: '/decision'
+      fullPath: '/decision'
+      preLoaderRoute: typeof DecisionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dataset': {
+      id: '/dataset'
+      path: '/dataset'
+      fullPath: '/dataset'
+      preLoaderRoute: typeof DatasetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checklist': {
+      id: '/checklist'
+      path: '/checklist'
+      fullPath: '/checklist'
+      preLoaderRoute: typeof ChecklistRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +237,26 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ChecklistRoute: ChecklistRoute,
+  DatasetRoute: DatasetRoute,
+  DecisionRoute: DecisionRoute,
+  FeaturesRoute: FeaturesRoute,
+  InterviewRoute: InterviewRoute,
+  PipelineRoute: PipelineRoute,
+  PlanRoute: PlanRoute,
+  PromptsRoute: PromptsRoute,
+  StackRoute: StackRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
