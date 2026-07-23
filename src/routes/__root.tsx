@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { SiteNav } from "../components/site-nav";
 
 function NotFoundComponent() {
   return (
@@ -116,8 +117,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="min-h-screen lg:flex bg-background">
+        <SiteNav />
+        <main className="flex-1 min-w-0">
+          <Outlet />
+        </main>
+      </div>
     </QueryClientProvider>
   );
 }
