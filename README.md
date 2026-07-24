@@ -1,5 +1,6 @@
 # 📊 Behavioral Customer Segmentation
 
+
 ## 🧠 AI-Powered Customer Analytics & Intelligent Market Segmentation Platform
 
 Behavioral Customer Segmentation is a next-generation analytics platform designed to help businesses understand customer behavior through AI-powered segmentation, predictive analytics, and interactive visualizations. By combining machine learning, behavioral modeling, customer profiling, and intelligent dashboards, the platform enables organizations to identify valuable customer segments, personalize marketing campaigns, improve customer engagement, and maximize business growth.
