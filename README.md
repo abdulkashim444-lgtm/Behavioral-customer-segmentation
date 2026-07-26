@@ -9,6 +9,9 @@ Inspired by enterprise analytics platforms such as Salesforce, Adobe Analytics, 
 
 ---
 
+<img width="1887" height="920" alt="Image" src="https://github.com/user-attachments/assets/8d59446b-82be-4621-ac98-1b56ec2d7277" />
+
+
 # ✨ Features
 
 ## 👥 Customer Intelligence
