@@ -103,4 +103,6 @@ Inspired by enterprise analytics platforms such as Salesforce, Adobe Analytics, 
 Behavioral Customer Segmentation empowers organizations to transform customer data into actionable business intelligence through AI-powered analytics, predictive segmentation, and interactive dashboards, enabling personalized customer experiences and smarter data-driven decision-making.
 
 
-Check out : https://behavioral-customer-segmentation.lovable.app/
+## Check out : 
+
+   https://behavioral-customer-segmentation.lovable.app/
